@@ -1,0 +1,10 @@
+version: '3'
+services:
+  sh:
+    build: .
+    container_name: hogehoge
+    volumes:
+      - ./work:/tmp/work
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    command: sh /tmp/work/create_directory.sh
